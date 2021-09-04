@@ -8,8 +8,8 @@ So, only thing you have to do is changing the platform between x64 and x86 befor
 The code doesnt have any imports rebuilding</br>
 The code doesn't work for .NET files
 # Credits
-Washi for AsmResolver - https://github.com/Washi1337/AsmResolver</br>
-Zer0Mem0ry for sharing his RunPE - https://github.com/Zer0Mem0ry/RunPE/blob/master/RunPE.cpp</br>
-TRIKbranch for also sharing his RunPE - https://github.com/TRIKbranch/RunPE-X86--X64-/blob/master/RunPE.cpp</br>
-dr4k0nia for the idea - https://github.com/dr4k0nia/Origami</br>
+Washi for <a href="https://github.com/Washi1337/AsmResolver">AsmResolver</a></br>
+Zer0Mem0ry for <a href="https://github.com/Zer0Mem0ry/RunPE/blob/master/RunPE.cpp">sharing his RunPE</a></br>
+TRIKbranch for also <a href="https://github.com/TRIKbranch/RunPE-X86--X64-/blob/master/RunPE.cpp">sharing his RunPE</a></br>
+dr4k0nia <a href="https://github.com/dr4k0nia/Origami">for the idea</a></br>
 ~ 0x34c, 2021
