@@ -1,6 +1,9 @@
 # PgPacker
 Simple packer coded in C++ and C#, which uses RunPE.</br>
 Code is well commented, though, if I didn't understand it correctly, or if I just missed something, you can create new pull request.
+# Usage
+Stub compiled as x64 obviously doesn't work with x86 files, and vice versa.</br>
+So, only thing you have to do is changing the platform between x64 and x86 before compiling. The files will be compiled in `build` folder.
 # Known issues
 The code doesnt have any imports rebuilding</br>
 The code doesn't work for .NET files
