@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Packers\IPacker.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Packers\PeSectionLoader.cs" />
     <Compile Include="Program.cs" />

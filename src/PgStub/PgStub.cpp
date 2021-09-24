@@ -16,8 +16,6 @@ int main()
     std::cout << rawFile.size() << std::endl;
     if(rawFile.size() != 0)
         runPE(rawFile.data());
-    std::cin.get();
-    std::cin.get();
 }
 
 std::vector<unsigned char> getFile() {

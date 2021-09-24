@@ -28,7 +28,10 @@ namespace PgPacker
                 Environment.Exit(0);
             }
             Logger.Log("Starting packing!");
-            PeSectionLoader.Pack(filePath);
+
+            IPacker packer = new PeSectionLoader(filePath);
+            packer.Pack();
+
             Logger.Log($"Done! File has been saved at {Path.GetDirectoryName(filePath)}\\{Path.GetFileNameWithoutExtension(filePath)}_packed{Path.GetExtension(filePath)}");
         }
     }

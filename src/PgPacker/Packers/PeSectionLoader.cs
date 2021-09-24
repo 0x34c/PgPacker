@@ -8,16 +8,21 @@ using System.Reflection;
 
 namespace PgPacker.Packers
 {
-    class PeSectionLoader
+    class PeSectionLoader : IPacker
     {
-        public static void Pack(string filePath)
+        private string _filePath { get; set; }
+        public PeSectionLoader(string filePath)
+        {
+            this._filePath = filePath;
+        }
+        public void Pack()
         {
             /* We have to load the stub, i'll use AsmResolver for that! */
             PEFile peFile = PEFile.FromFile("PgStub.exe");
             Logger.Log("Loaded stub!");
 
             /* Encrypting the file using xor */
-            byte[] enc = File.ReadAllBytes(filePath).Select(x => (byte)(x ^ peFile.FileHeader.TimeDateStamp)).ToArray();
+            byte[] enc = File.ReadAllBytes(_filePath).Select(x => (byte)(x ^ peFile.FileHeader.TimeDateStamp)).ToArray();
             Logger.Log("Encrypted payload!");
 
             /* Inserting it inside PESection */
@@ -27,7 +32,7 @@ namespace PgPacker.Packers
             Logger.Log("Inserted into PESection!");
 
             /* Writing the file! */
-            peFile.Write($"{Path.GetDirectoryName(filePath)}\\{Path.GetFileNameWithoutExtension(filePath)}_packed{Path.GetExtension(filePath)}");
+            peFile.Write($"{Path.GetDirectoryName(_filePath)}\\{Path.GetFileNameWithoutExtension(_filePath)}_packed{Path.GetExtension(_filePath)}");
             Logger.Log("Finishing...");
         }
     }
